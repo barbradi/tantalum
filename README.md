@@ -1,20 +1,21 @@
 ## PRE REQUISITES
+
 Consul must be running on port 8500, this is configurable through properties files
 
 ## Running the message app
 
-Move to the app message module folder and run
+Move to the root tantalum folder and run
 
 ```
-gradle bootRun
+./gradlew :message:bootrun
 ```
 
 ## Running the uuid app
 
-Move to the app uuid module folder and run
+open another terminal move to the root tantalum folder and run
 
 ```
-gradle bootRun
+./gradlew :uuid:bootrun
 ```
 
 
