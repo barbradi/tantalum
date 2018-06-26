@@ -1,0 +1,4 @@
+rootProject.name = 'tantalum'
+include 'message'
+include 'uuid'
+
