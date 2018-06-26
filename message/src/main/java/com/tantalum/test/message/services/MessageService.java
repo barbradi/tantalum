@@ -17,8 +17,6 @@ import org.springframework.web.client.RestTemplate;
 import java.net.URI;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class MessageService {
