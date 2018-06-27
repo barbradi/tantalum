@@ -22,14 +22,10 @@ import java.util.Calendar;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MessageControllerTest {
@@ -125,49 +121,3 @@ public class MessageControllerTest {
         }
     }
 }
-//
-//@RunWith(MockitoJUnitRunner.class)
-//public class OfferControllerTest {
-//
-//    private static final String OFFER_1_NAME = "offer1";
-//    private static final String OFFER_2_NAME = "offer1";
-//    private static final long OFFER_1_ID = 1L;
-//    private static final long OFFER_2_ID = 2L;
-//
-//    @InjectMocks
-//    private OfferController offerController;
-//
-//    @Mock
-//    private OfferService offerService;
-//
-//    // Instead of mocking modelMapper behavior lets simplify just this one and use the real implementation
-//    @Spy
-//    private ModelMapper modelMapper = new ModelMapper();
-//
-//    private MockMvc mockMvc;
-//
-//    @Before
-//    public void setup() {
-//        mockMvc = MockMvcBuilders.standaloneSetup(offerController).build();
-//    }
-//
-//    @Test
-//    public void getOffers() throws Exception {
-//
-//        // Given
-//        List<Offer> expectedOffers = getExpectedOfferList();
-//        when(offerService.getOffers()).thenReturn(expectedOffers);
-//
-//        // When
-//        mockMvc
-//                .perform(get("/offer"))
-//                .andExpect(status().isOk())
-//                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
-//                .andExpect(jsonPath("$[0].id").value(OFFER_1_ID))
-//                .andExpect(jsonPath("$[0].name").value(OFFER_1_NAME))
-//                .andExpect(jsonPath("$[1].id").value(OFFER_2_ID))
-//                .andExpect(jsonPath("$[1].name").value(OFFER_2_NAME));
-//
-//        // Then
-//        verify(offerService, times(1)).getOffers();
-//    }

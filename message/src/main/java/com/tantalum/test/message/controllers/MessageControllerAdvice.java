@@ -1,5 +1,6 @@
-package com.tantalum.test.message.exceptions;
+package com.tantalum.test.message.controllers;
 
+import com.tantalum.test.message.exceptions.NoModificableMessageException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
