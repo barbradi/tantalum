@@ -55,7 +55,7 @@ public class MessageService {
     }
 
     public List<Message> getAllMessages(int numOfMessages) {
-        Page<Message> messagesPage=  messageRepository.findMessagesTop(new PageRequest(0, numOfMessages));
+        Page<Message> messagesPage=  messageRepository.findAll(new PageRequest(0, numOfMessages));
         return messagesPage.getContent();
     }
 
